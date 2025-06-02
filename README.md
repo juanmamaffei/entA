@@ -1,24 +1,37 @@
-# README
+## 💻 Live Coding – Appointment Booking System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Objective
 
-Things you may want to cover:
+Implement a basic appointment booking system using Rails 8 and Turbo.
 
-* Ruby version
+### Requirements
 
-* System dependencies
+Users should be able to book appointments. Each appointment must have:
 
-* Configuration
+- Start date and time (`starts_at`)
+- Duration in minutes (`duration_minutes`)
+- Status (`pending`, `confirmed`, `cancelled`)
 
-* Database creation
+You must:
 
-* Database initialization
+- Set up the necessary models, controllers, and views from scratch.
+- Create a minimal UI to **list and create appointments**, using **Turbo Frames or Streams**.
+- Ensure that **appointments cannot overlap** in time for the same user.
+- Decide **how and where to implement the overlap validation logic** (e.g. at the model, service, or database level).
 
-* How to run the test suite
+You can assume a `User` model will be created as part of the task. There is no authentication—just associate appointments with a user manually.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Time estimate
 
-* Deployment instructions
+20 minutes.
 
-* ...
+### Scope
+
+- Use Turbo to update the appointment list when a new one is created.
+- Use any method you prefer to render the appointment form and list.
+- Implement proper validations to prevent invalid or conflicting data.
+
+### Nice to have
+
+- Propose or implement a strategy to **scale appointment conflict validation** (e.g. through database constraints, indexes, or background checks).
+- Add a basic test or comment explaining how the system would behave under high concurrency.
